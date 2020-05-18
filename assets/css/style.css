@@ -97,17 +97,641 @@ li {
   list-style-type: none;
 }
 
-/*for wrapper*/
-.wrapper {
+/*for container*/
+/* .container {
   max-width: 1360px;
-  width: 86%; 
+  width:100%; 
+  margin: 0 auto;
+} */
+
+.wrapper{
+  max-width: 1360px;
+  width:68%; 
   margin: 0 auto;
 }
+/*=================================
+  Header styling starts here
+=================================*/
+.header-part{
+  background-color: #273d81;
+}
+header{
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header form{
+  width: 31%;
+  float: left;
+  position: relative;
+  bottom: 10px;
+}
+.search input{
+  width: 75%;
+  height: 32px;
+  float: left;
+  border: 1px solid #009fe3;
+}
+.search a{
+  background-color: #009fe3;
+  color: white;
+  padding: 8.7px 6.5%;
+
+}
+.hamburger { display: none;}
+.search input::placeholder{
+  padding-left: 7px;
+  font-size: 16px;
+}
+
+.menu-link{
+  background-color: #006FB8;
+  color: white;
+}
+.menu-link li{
+  padding: 10px 0px 12px 16px;
+}
+
+.menu-link a{
+  color: white;
+  font-weight: 500;
+  padding-right: 16px;
+  border-right: 1px solid #009fe3;
+}
+
+.active{
+  background-color: #009fe3;
+}
+
+/* banner section start*/
+
+.banner{
+  height: 600px;
+  background-image: url(https://www.eurofinance.com/wp-content/uploads/HP5-1-scaled.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #005fab;
+}
+
+.banner-content{
+  padding-top: 284px;
+  color: white;
+  font-family:"Dosis", sans-serif;
+}
+
+h2{
+  font-size: 42px;
+  font-weight: 200;
+  letter-spacing: 2px;
+  padding-bottom: 15px;
+}
+
+.banner-content p{
+  width: 50%;
+  color: #76cfec;
+  font-size: 36px;
+}
+
+/* banner section end*/
+
+/*core-business section start*/
+
+.core-business-content{
+  padding: 80px 0;
+  font-family: 'Dosis',sans-serif;
+  color: #0261b3;
+}
+
+h3{
+  font-size: 36px;
+}
+
+.core-business-content a{
+  margin: 28px 10px 0;
+  display: block;
+  color: #0261b3;
+  text-align: center;
+}
+.core-business-content .business-link{
+  display: flex;
+  justify-content: space-around;
+}
+.business-link li{
+  width: 15%;
+}
+.core-business-content p{
+  margin-top: 28px;
+  font-size: 26px;
+  text-align: center;
+}
+.core-business-content .fas{
+  width: 44%;
+  padding: 27px;
+  border: 1px solid #0261b3;
+  border-radius: 50%;
+  font-size: 45px;
+}
+/*core-business section end*/
+
+/* flagship conference start */
+
+.flagship-conference{
+  height: 550px;
+  background-image: url(https://www.eurofinance.com/wp-content/uploads/3600x1066-flagship-scaled.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'Dosis',sans-serif;
+  color: white;
+}
+
+.flagship-conference-content{
+  padding-top: 162px;
+}
+.conference-date{
+  width: 35%;
+  font-size: 25px;
+  padding: 16px 0 22px;
+}
+.conference-content{
+  font-size: 16px;
+  width: 60%;
+  font-family: sans-serif;
+}
+.flagship-conference-content a,.btn{
+  background-color: #009fe3;
+  color: white;
+  font-family: sans-serif;
+  margin-top: 38px;
+  padding: 7px 5%;
+}
+/* flagship conference end */
+
+/* news section start*/
+.news-container{
+  padding: 70px 0 72px;
+  color: #0261b3;
+  font-family: 'Dosis',sans-serif;
+}
+.news-container li{
+  width: 22%;
+  padding-left: 18px;
+  margin-top: 52px;
+  vertical-align: top;
+}
+h4{
+  font-size: 26px;
+  font-weight: 500,
+  font-family:'Dosis', sans-serif;
+}
+.news-date{
+  padding: 12px 0;
+  color: gray;
+  font-family: sans-serif;
+}
+.news-content{
+  color: black;
+  font-family: sans-serif;
+}
+/* news section end*/
+
+/* conference section start */
+.conference{
+  background-color: #1e3066;
+  color: white;
+}
+.conference-page{
+  padding: 42px 0 54px;
+  font-family: 'Dosis',sans-serif;
+}
+.conference-heading{
+  margin-bottom: 34px;
+  display: flex;
+  justify-content: space-between;
+}
+.conference-heading a{
+  padding: 10px 25px;
+  border: 1px solid white;
+  color: white;
+  font-family: sans-serif;
+}
+.conference-event li{
+  width: 32%;
+  padding-left: 14px;
+  border-left: 1px solid white;
+  vertical-align: top;
+}
+.conference-event li:first-of-type{
+  padding-left: 0;
+  border: none;
+}
+.conference-event li h4{
+  margin-bottom: 20px;
+  color: #61c7f5;
+}
+.conference-event li p{
+  font-family: sans-serif;
+}
+/* conference section end */
+
+/* sign up section start */
+.sign-up{
+  padding: 62px 0 78px;
+  background-color:#035ba4;
+  color: white;
+}
+.sign-up h3{
+  font-family: 'Dosis',sans-serif;
+}
+.sign-up ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.sign-up li{
+  width: 50%;
+  font-size: 16px;
+}
+.sign-up form input{
+  width: 68%;
+  height: 34px;
+  float: left;
+  border: 1px solid #009fe3;
+}
+.sign-up form input::placeholder{
+  padding-left: 10px;
+  /* font-size: 16px; */
+}
+.sign-up p{
+  padding-top: 20px ;
+}
+.sign-up form a{
+  width: 30%;
+  background-color: #009fe3;
+  color: white;
+  text-align: center;
+  padding: 9.5px 0;
+}
+/* sign up section end */
+
+/* network section start  */
+
+.network{
+  padding: 114px 0 94px;
+}
+
+.network li{
+  width: 49%;
+  vertical-align: top;
+}
+.network-container{
+  padding-right: 106px;
+}
+.network-content h3{
+  color: #006FB8;
+  font-family: 'Dosis',sans-serif;
+}
+.network-content p{
+  padding: 24px 0 62px;
+}
+.btn{
+  padding: 7px 9%;
+  margin-top: 0px;
+}
+.btn:last-child{
+  margin-left: 14px;
+  color: #006FB8;
+  background-color: white;
+  outline: 1.2px solid #006FB8;
+}
+/* network section end  */
+
+/* footer section start */
+footer{
+  background-color:#143F78;
+  color: white;
+}
+.top-footer{
+  padding:46px 0 70px; 
+}
+.footer-content:first-of-type p{
+  margin-top: 15px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+.footer-content{
+  width: 33%;
+  vertical-align: top;
+} 
+.footer-content h4{
+  margin-bottom: 14px;
+  font-family: 'Dosis',sans-serif;
+}
+.euro-links li{
+  margin-top: 4px; 
+  display: block;
+  font-size: 18px; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.fab{
+  font-size: 40px;
+  padding-right: 14px;
+}
+.footer-link{
+  background-color: #1e3066;
+  padding: 15px 0;
+}
+.footer-link ul{
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+}
+.bottom-links li{
+  padding:0 10px;
+  border-right: 1px solid white;
+}
+.bottom-links li:last-child,.menu-link li:last-child a{
+  border: none;
+}
+/* footer section end */
 
 /*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+/*media query for 1024px starts here*/
+@media only screen and (max-width: 1024px) {
 
+  .wrapper {
+    max-width: 940px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .menu-link a {
+    padding-right: 8px;
+    font-size: 14px;
+  }
 
+  .menu-link li{
+    padding: 4px 0 6px 8px;
+  }
 
+  .business-link li{
+    width: 17%;
+    margin-left: 25px;
+  }
+
+  .core-business-content  .fas{
+    width: 52%;
+  }
+
+  h4,.conference-date,.conference-event h4{
+    font-size: 20px;
+  }
+  .conference-content,.conference-event p,.euro-links p,.bottom-links li{
+    font-size: 14px;
+  }
+  .conference-event li{
+    width: 31%;
+  }
+  .network-content h3,.fab{
+    font-size: 28px;
+  }
+  .network-content p{
+    padding: 20px 0 30px;
+  }
+  .btn{
+    padding: 7px 4%;
+  }
+  .footer-content{
+    width: 30%;
+    padding-right: 14px;
+  }
+  .euro-links p{
+    padding-bottom: 10px;
+  }
+  .footer-link ul{
+    font-size: 12px;
+  }
 }  
+
+/*media query for 995px starts here*/
+
+@media only screen and (min-width:1024px) {
+  .search a:hover {
+    background-color: #76cfec;
+    color: white;
+  }
+  .menu-link a:hover{
+    color:#143F78;
+  }
+
+  .business-link li:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+
+  .btn:last-child:hover{
+    background-color: #009fe3;
+    color: white;
+    border: 1px solid white;
+  }
+  .core-business-content a:hover,.conference-heading a:hover,.euro-links li:hover,.fab:hover,
+  .bottom-links li:hover,.bottom-footer li:last-child:hover{
+    color: #61c7f5;
+  }
+  .fas:hover{
+    border: 1px solid #61c7f5;
+  }
+  .flagship-conference-content a:hover,.btn:hover,.sign-up form a:hover{
+    background-color: white;
+    color: #009fe3;
+  }
+  .btn:hover,.conference-heading a:hover{
+    border: 1px solid #009fe3;
+  }
+}
+
+@media only screen and (max-width: 995px) {
+  .news-container li{
+    width: 20%;
+  }
+  /* hamburger  start*/
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 2%;
+    width: 5%;
+  }
+
+  .hamburger > span {
+    background-color: #000;
+    border-radius: 3px;
+    display: block;
+    height: 4px;
+    margin: 5px 0;
+    text-indent: -9999px;
+    transition: all .5s ease-in-out;
+  }
+  
+  .hamburger-active > span:nth-child(1) {
+    background-color: crimson;
+    margin: 0;
+    transform: translate(-5px,5px) rotate(45deg);
+  }
+  .hamburger-active > span:nth-child(2) {
+    background-color: blueviolet;
+    margin: 0;
+    transform: scale(0);
+  }
+  .hamburger-active > span:nth-child(3) {
+    background-color: crimson;
+    margin: 0;
+    transform: translate(-6px,-5px) rotate(-45deg);
+  }
+  .menu {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    position: absolute;
+    width: 50%;
+    right: 0;
+    transform: scale(0);
+    top: 45px;
+    background: -webkit-linear-gradient(to right, #B0DAB9, #DAD299);
+    background: linear-gradient(to right, #CCC, #fff,#CBB);
+  }
+  
+  .navScale {
+    transform: scale(1);
+    z-index: 2;
+  }
+
+  nav ul li { padding: 5px; }
+  
+  .menu li a { 
+    color: #000 ; 
+    border: none;
+  }
+
+  .menu li {
+    border: 1px solid #009fe3;
+    display: block;
+    background-color:white;
+    text-align: center;
+  }
+
+  /* hamburger end */
+  
+  header form,.conference-heading a,.network-image{
+    display: none;
+  }
+  
+  .banner-content,.flagship-conference-content,.news-container,.conference-event,.conference-heading,
+  .sign-up h3 ,.sign-up p,.sign-up form input,.network li,.footer-content,.bottom-links li,.bottom-footer li p{
+    text-align: center; 
+  }
+
+  .flagship-conference-content{
+    background-image: none;
+  }
+
+  .banner-content p,.flagship-conference-content p,.news-container li,.conference-event li,.network li{
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .news-content,.news-date,.network li p,.btn,.flagship-conference-content .conference-content {
+    font-size: 18px;
+  }
+  
+  .business-link li:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: all ease-in-out;
+    transition: all ease-in-out;
+  }
+  .conference-event li,.bottom-links li{
+    border: none;
+    margin-bottom: 30px;
+  }
+  
+  h4,.conference-event h4{
+    font-size: 30px;
+  }
+  
+  .sign-up ul,.footer-link ul,.bottom-footer li,.conference-heading{
+    display: block;
+  }
+  
+  .sign-up li,.sign-up form a,.sign-up form input,.footer-content,.bottom-links li{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .sign-up {
+    padding: 55px 0 38px;
+  }
+  
+  .network-container{
+    padding: 0;
+  }
+
+  .footer-content:nth-of-type(2){
+    padding: 20px 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+  }
+}
+
+/*media query for 767px starts here*/
+@media only screen and (max-width: 767px) {
+  .banner{
+    background-image: none;
+  }
+  .wrapper{
+    width: 68%;
+  }
+  .core-business-content .business-link{
+    display: block;
+  }
+  .business-link li,.core-business-content .fas {
+    width: 32%;
+    margin-left: 0;
+    vertical-align: top;
+  }
+  h3{
+    text-align: center;
+  }
+}
+
+/*media query for 540px starts here*/
+@media only screen and (max-width: 540px) {
+  .wrapper{
+    width: 82%;
+  }
+  .business-link li{
+    width: 48%;
+    margin-left: 0;
+    vertical-align: top;
+  }
+  .core-business-content .fas {
+    width: 37%;
+  }
+}
+
+/*media query for 375px starts here*/
+@media only screen and (max-width: 375px) {
+  .wrapper{
+    width: 92%;
+  }
+  .sign-up li, .sign-up form a, .sign-up form input, .footer-content, .bottom-links li{
+    width: 98%;
+  }
+  .news-container li{
+    padding-left: 0;
+  }
+}
